@@ -31,6 +31,6 @@ $ python brush.py
 
 ## 词库github地址
 
-![dict](https://github.com/kajweb/dict)
+[dict](https://github.com/kajweb/dict)
 
 若要添加自定义词库，将json文件放在wordlib文件夹即可
