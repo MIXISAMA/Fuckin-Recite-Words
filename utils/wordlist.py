@@ -21,7 +21,7 @@ class WordlistFactory:
             "forgotten": [],
             "stars": set(),
         }
-        with open(self._my_config.wordlib_path+wordlist_name+'.json', 'r') as f:
+        with open(self._my_config.wordlib_path+wordlist_name+'.json', 'r', encoding='UTF-8') as f:
             words = [json.loads(line) for line in f.readlines()]
             shuffle(words)
             

@@ -1,7 +1,8 @@
 import os
 import sys
 
-cls_cmd = 'cls' if sys.platform.startswith('win') else 'clear'
+platform = sys.platform
+cls_cmd = 'cls' if platform.startswith('win') else 'clear'
 
 front_color = {
     'red': '31m',
@@ -60,6 +61,8 @@ def print_a_b(a, b):
     max_cols = os.get_terminal_size().columns
     blanks = int(max_cols * margin)
     sep = max_cols - 2*blanks - len_a - len_b
+    if platform.startswith('win'):
+        sep -= 1
     print(" "*blanks, end="")
     print(a, b, sep=" "*sep)
 
