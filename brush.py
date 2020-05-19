@@ -76,6 +76,10 @@ def show_body(wordlist):
 
     for tran in content["trans"]:
         my_print(fc(tran["pos"]+".", "magenta"), fc(tran["tranCn"], "green"))
+    
+    rem = content.get("remMethod")
+    if rem:
+        my_print("记忆方法: ", fc(rem["val"], "cyan"))
 
 def refresh(wordlist, answered):
     if answered:
